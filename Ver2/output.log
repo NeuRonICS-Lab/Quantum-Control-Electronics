@@ -1,0 +1,462 @@
+INFO:root:Loading Bitstream ./bitstreams/design_1_wrapper_jun18.bit 
+INFO:root:Executed except
+INFO:root:Wave loading completed for channel 0
+INFO:root:Wave loading completed for channel 1
+INFO:root:Wave loading completed for channel 2
+INFO:root:Wave loading completed for channel 3
+INFO:root:Wave loading completed for channel 4
+INFO:root:Wave loading completed for channel 5
+INFO:root:Wave loading completed for channel 6
+INFO:root:Wave loading completed for channel 7
+INFO:root:in find_common_freq and inital readout freq is 6026
+INFO:root:found common freq to be 6026.691000000209897 and the diff from original freq is 0.000000000210093 
+ERROR:root:Maximum power can only be 100, but given 6010. Assigning Max power
+ERROR:root:Maximum power can only be 100, but given 6010. Assigning Max power
+INFO:root:Comleted 0 / 11  iteration and the value of param is 50.0000 for experiment ['power_rabi']
+INFO:root:Comleted 1 / 11  iteration and the value of param is 55.0000 for experiment ['power_rabi']
+INFO:root:Comleted 2 / 11  iteration and the value of param is 60.0000 for experiment ['power_rabi']
+INFO:root:Comleted 3 / 11  iteration and the value of param is 65.0000 for experiment ['power_rabi']
+INFO:root:Comleted 4 / 11  iteration and the value of param is 70.0000 for experiment ['power_rabi']
+INFO:root:Comleted 5 / 11  iteration and the value of param is 75.0000 for experiment ['power_rabi']
+INFO:root:Comleted 6 / 11  iteration and the value of param is 80.0000 for experiment ['power_rabi']
+INFO:root:Comleted 7 / 11  iteration and the value of param is 85.0000 for experiment ['power_rabi']
+INFO:root:Comleted 8 / 11  iteration and the value of param is 90.0000 for experiment ['power_rabi']
+INFO:root:Comleted 9 / 11  iteration and the value of param is 95.0000 for experiment ['power_rabi']
+INFO:root:Comleted 10 / 11  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Completed the experiment
+INFO:root:Comleted 0 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 1 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 2 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 3 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 4 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 5 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 6 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 7 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 8 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 9 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 10 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 11 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 12 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 13 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 14 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 15 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 16 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 17 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 18 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 19 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 20 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 21 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 22 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 23 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 24 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 25 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 26 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 27 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 28 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 29 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 30 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 31 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 32 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 33 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 34 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 35 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 36 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 37 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 38 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 39 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 40 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 41 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 42 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 43 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 44 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 45 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 46 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 47 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 48 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 49 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 50 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 51 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 52 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 53 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 54 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 55 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 56 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 57 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 58 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 59 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 60 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 61 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 62 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 63 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 64 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 65 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 66 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 67 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 68 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 69 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 70 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 71 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 72 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 73 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 74 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 75 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 76 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 77 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 78 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 79 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 80 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 81 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 82 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 83 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 84 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 85 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 86 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 87 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 88 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 89 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 90 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 91 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 92 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 93 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 94 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 95 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 96 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 97 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 98 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 99 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 100 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 101 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 102 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 103 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 104 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 105 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 106 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 107 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 108 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 109 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 110 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 111 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 112 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 113 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 114 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 115 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 116 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 117 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 118 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 119 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 120 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 121 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 122 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 123 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 124 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 125 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 126 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 127 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 128 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 129 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 130 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 131 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 132 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 133 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 134 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 135 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 136 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 137 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 138 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 139 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 140 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 141 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 142 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 143 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 144 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 145 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 146 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 147 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 148 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 149 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 150 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 151 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 152 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 153 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 154 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 155 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 156 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 157 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 158 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 159 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 160 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 161 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 162 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 163 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 164 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 165 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 166 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 167 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 168 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 169 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 170 / 1000  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Existing the run_exp task on stop request
+INFO:root:Executed except
+INFO:root:Wave loading completed for channel 0
+INFO:root:Wave loading completed for channel 1
+INFO:root:Wave loading completed for channel 2
+INFO:root:Wave loading completed for channel 3
+INFO:root:Wave loading completed for channel 4
+INFO:root:Wave loading completed for channel 5
+INFO:root:Wave loading completed for channel 6
+INFO:root:Wave loading completed for channel 7
+INFO:root:in find_common_freq and inital readout freq is 6026
+INFO:root:found common freq to be 6026.691000000209897 and the diff from original freq is 0.000000000210093 
+ERROR:root:Maximum power can only be 100, but given 6010. Assigning Max power
+ERROR:root:Maximum power can only be 100, but given 6010. Assigning Max power
+INFO:root:Comleted 0 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 1 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 2 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 3 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 4 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 5 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 6 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 7 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 8 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 9 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 10 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 11 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 12 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 13 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 14 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 15 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 16 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 17 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 18 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 19 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 20 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 21 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 22 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 23 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 24 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 25 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 26 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 27 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 28 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 29 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 30 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 31 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 32 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 33 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 34 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 35 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 36 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 37 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 38 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 39 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 40 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 41 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 42 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 43 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 44 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 45 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 46 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 47 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 48 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 49 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Completed the experiment
+INFO:root:Executed except
+INFO:root:Wave loading completed for channel 0
+INFO:root:Wave loading completed for channel 1
+INFO:root:Wave loading completed for channel 2
+INFO:root:Wave loading completed for channel 3
+INFO:root:Wave loading completed for channel 4
+INFO:root:Wave loading completed for channel 5
+INFO:root:Wave loading completed for channel 6
+INFO:root:Wave loading completed for channel 7
+INFO:root:Unable to complete MTS sucessfully
+INFO:root:Re-running the MTS
+ERROR:root:Unable to complete MTS sucessfully in even 2nd Run, Please check and reprogramm clocks
+INFO:root:in find_common_freq and inital readout freq is 1000
+INFO:root:found common freq to be 1000.000000000630280 and the diff from original freq is 0.000000000630280 
+ERROR:root:Maximum power can only be 100, but given 6010. Assigning Max power
+ERROR:root:Maximum power can only be 100, but given 6010. Assigning Max power
+INFO:root:Comleted 0 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 1 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 2 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 3 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 4 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Existing the run_exp task on stop request
+INFO:root:Comleted 0 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 1 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 2 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 3 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 4 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 5 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 6 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 7 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 8 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 9 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 10 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 11 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 12 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 13 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 14 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 15 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 16 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 17 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 18 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 19 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 20 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 21 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 22 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 23 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Existing the run_exp task on stop request
+INFO:root:Executed except
+INFO:root:Wave loading completed for channel 0
+INFO:root:Wave loading completed for channel 1
+INFO:root:Wave loading completed for channel 2
+INFO:root:Wave loading completed for channel 3
+INFO:root:Wave loading completed for channel 4
+INFO:root:Wave loading completed for channel 5
+INFO:root:Wave loading completed for channel 6
+INFO:root:Wave loading completed for channel 7
+INFO:root:Unable to complete MTS sucessfully
+INFO:root:Re-running the MTS
+ERROR:root:Unable to complete MTS sucessfully in even 2nd Run, Please check and reprogramm clocks
+INFO:root:in find_common_freq and inital readout freq is 6000
+INFO:root:found common freq to be 6000.000000000000000 and the diff from original freq is 0.000000000000000 
+ERROR:root:Maximum power can only be 100, but given 6010. Assigning Max power
+ERROR:root:Maximum power can only be 100, but given 6010. Assigning Max power
+INFO:root:Comleted 0 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 1 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 2 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 3 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 4 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 5 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 6 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Existing the run_exp task on stop request
+INFO:root:Executed except
+INFO:root:Wave loading completed for channel 0
+INFO:root:Wave loading completed for channel 1
+INFO:root:Wave loading completed for channel 2
+INFO:root:Wave loading completed for channel 3
+INFO:root:Wave loading completed for channel 4
+INFO:root:Wave loading completed for channel 5
+INFO:root:Wave loading completed for channel 6
+INFO:root:Wave loading completed for channel 7
+INFO:root:in find_common_freq and inital readout freq is 6026
+INFO:root:found common freq to be 6026.691000000209897 and the diff from original freq is 0.000000000210093 
+ERROR:root:Maximum power can only be 100, but given 6010. Assigning Max power
+ERROR:root:Maximum power can only be 100, but given 6010. Assigning Max power
+INFO:root:Comleted 0 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 1 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Existing the run_exp task on stop request
+INFO:root:Executed except
+INFO:root:Wave loading completed for channel 0
+INFO:root:Wave loading completed for channel 1
+INFO:root:Wave loading completed for channel 2
+INFO:root:Wave loading completed for channel 3
+INFO:root:Wave loading completed for channel 4
+INFO:root:Wave loading completed for channel 5
+INFO:root:Wave loading completed for channel 6
+INFO:root:Wave loading completed for channel 7
+INFO:root:Unable to complete MTS sucessfully
+INFO:root:Re-running the MTS
+INFO:root:in find_common_freq and inital readout freq is 6026
+INFO:root:found common freq to be 6026.691000000209897 and the diff from original freq is 0.000000000210093 
+INFO:root:Executed except
+INFO:root:Wave loading completed for channel 0
+INFO:root:Wave loading completed for channel 1
+INFO:root:Wave loading completed for channel 2
+INFO:root:Wave loading completed for channel 3
+INFO:root:Wave loading completed for channel 4
+INFO:root:Wave loading completed for channel 5
+INFO:root:Wave loading completed for channel 6
+INFO:root:Wave loading completed for channel 7
+INFO:root:Unable to complete MTS sucessfully
+INFO:root:Re-running the MTS
+ERROR:root:Unable to complete MTS sucessfully in even 2nd Run, Please check and reprogramm clocks
+INFO:root:in find_common_freq and inital readout freq is 6026
+INFO:root:found common freq to be 6026.691000000209897 and the diff from original freq is 0.000000000210093 
+ERROR:root:Maximum power can only be 100, but given 6010. Assigning Max power
+ERROR:root:Maximum power can only be 100, but given 6010. Assigning Max power
+INFO:root:Comleted 0 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 1 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 2 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 3 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 4 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 5 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 6 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 7 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 8 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 9 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 10 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 11 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 12 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 13 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 14 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Existing the run_exp task on stop request
+INFO:root:Executed except
+INFO:root:Wave loading completed for channel 0
+INFO:root:Wave loading completed for channel 1
+INFO:root:Wave loading completed for channel 2
+INFO:root:Wave loading completed for channel 3
+INFO:root:Wave loading completed for channel 4
+INFO:root:Wave loading completed for channel 5
+INFO:root:Wave loading completed for channel 6
+INFO:root:Wave loading completed for channel 7
+INFO:root:Unable to complete MTS sucessfully
+INFO:root:Re-running the MTS
+ERROR:root:Unable to complete MTS sucessfully in even 2nd Run, Please check and reprogramm clocks
+INFO:root:in find_common_freq and inital readout freq is 6026
+INFO:root:found common freq to be 6026.691000000209897 and the diff from original freq is 0.000000000210093 
+ERROR:root:Maximum power can only be 100, but given 6010. Assigning Max power
+ERROR:root:Maximum power can only be 100, but given 6010. Assigning Max power
+INFO:root:Comleted 0 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 1 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 2 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Existing the run_exp task on stop request
+INFO:root:Executed except
+INFO:root:Wave loading completed for channel 0
+INFO:root:Wave loading completed for channel 1
+INFO:root:Wave loading completed for channel 2
+INFO:root:Wave loading completed for channel 3
+INFO:root:Wave loading completed for channel 4
+INFO:root:Wave loading completed for channel 5
+INFO:root:Wave loading completed for channel 6
+INFO:root:Wave loading completed for channel 7
+INFO:root:Unable to complete MTS sucessfully
+INFO:root:Re-running the MTS
+ERROR:root:Unable to complete MTS sucessfully in even 2nd Run, Please check and reprogramm clocks
+INFO:root:in find_common_freq and inital readout freq is 6026
+INFO:root:found common freq to be 6026.691000000209897 and the diff from original freq is 0.000000000210093 
+ERROR:root:Maximum power can only be 100, but given 6010. Assigning Max power
+ERROR:root:Maximum power can only be 100, but given 6010. Assigning Max power
+INFO:root:Comleted 0 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 1 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 2 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 3 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 4 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 5 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 6 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 7 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 8 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 9 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 10 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 11 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 12 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 13 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Existing the run_exp task on stop request
+INFO:root:Comleted 0 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Existing the run_exp task on stop request
+INFO:root:Comleted 0 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 1 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 2 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 3 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 4 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 5 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 6 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 7 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 8 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 9 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 10 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 11 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 12 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Comleted 13 / 50  iteration and the value of param is 100.0000 for experiment ['power_rabi']
+INFO:root:Existing the run_exp task on stop request
