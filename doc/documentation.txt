@@ -192,3 +192,155 @@ This module represents a Digital-to-Analog Converter (DAC) and provides methods 
     - `set_nco_phase`: Sets the NCO phase offset.
     - `set_nyquist`: Sets the Nyquist zone.
     - `reset_nco_phase`: Resets the NCO phase.
+
+## ADC and DAC Classes Documentation
+
+### ADC (Analog-to-Digital Converter) Classes
+
+#### Readout Class
+This class manages the readout process for ADC channels, including configuration, data streaming, and DMA handling.
+
+**Attributes:**
+- `_rf`: Reference to the RF object for ADC tile and block access.
+- `_ch`: Channel number for the readout.
+- `_start_reg`: Register to start FIFO capture.
+- `_readout_trigger_src`: Source of the readout trigger.
+- `_adc_input_sel`: ADC input selection.
+- `_adc_fil_bypass`: Filter bypass configuration for the ADC.
+- `_adc_theta`: Theta value for ADC configuration.
+- `_trigger_width`: Width of the trigger signal.
+- `_trigger_delay`: Delay of the trigger signal.
+- `_adc_dac_lat`: ADC to DAC latency.
+- `_conf_mem_base_addr`: Base address for configuration memory.
+- `_conf_param_base_addr`: Base address for configuration parameters.
+- `_adc_handle`: Handle to the ADC block.
+- `_adc_pipeline`: Instance of the AdcPipeline class for ADC pipeline configuration.
+- `_dma`: Instance of the Dma class for DMA handling.
+- `_streamer`: Instance of the Streamer class for data streaming.
+
+**Methods:**
+- `__init__`: Initializes the Readout object with configurations.
+- `init_all_params`: Initializes ADC parameters.
+- `start_readout`: Starts the readout process.
+- `stop_readout`: Stops the readout process.
+- `set_adc_src_sel`: Sets ADC source selection.
+- `get_adc_src`: Gets ADC source selection.
+- `set_filter_bypass`: Sets filter bypass configuration.
+- `get_filter_bypass`: Gets filter bypass configuration.
+- `set_adc_quad`: Sets ADC quadrature value.
+- `set_adc_theta`: Sets ADC theta value.
+- `get_adc_theta`: Gets ADC theta value.
+- `set_ila_sel`: Sets ILA selection for debugging.
+- `dma_streamer_thread`: Handles DMA streaming.
+
+#### AdcPipeline Class
+This class configures the ADC pipeline.
+
+**Attributes:**
+- `_filter`: Instance of the IIRFilter class for ADC filtering.
+
+**Methods:**
+- `__init__`: Initializes the ADC pipeline.
+
+#### IIRFilter Class
+This class configures IIR filter parameters.
+
+**Attributes:**
+- `_ch`: Channel number.
+- `_f_cutoff`: Cutoff frequency.
+- `_f_order`: Filter order.
+- `_fs`: Sampling frequency.
+- `_conf_mem_base_addr`: Base address for configuration memory.
+- `_conf_mem_size`: Size of configuration memory.
+- `_conf_param_base_addr`: Base address for configuration parameters.
+- `_conf_mem_mmio_handle`: MMIO handle for configuration memory.
+- `_Ts`: Sampling period.
+
+**Methods:**
+- `__init__`: Initializes the IIR filter.
+- `scale`: Scales a value to a specific bit width.
+- `concat_samples`: Concatenates samples.
+- `gen_iir_params`: Generates IIR filter parameters.
+- `set_iir_params`: Sets IIR filter parameters.
+- `get_iir_params`: Gets IIR filter parameters.
+- `set_iir_order`: Sets IIR filter order.
+- `get_iir_order`: Gets IIR filter order.
+
+#### Dma Class
+This class manages DMA operations.
+
+**Attributes:**
+- `_dma_handle`: Handle to the DMA hardware block.
+- `_dma_reg_addr`: MMIO handle for DMA registers.
+- `_data_len`: Data length.
+- `_num_desc`: Number of descriptors.
+- `_desc_data_size`: Descriptor data size.
+- `_data_type`: Data type.
+- `_desc_buffer`: Descriptor buffer.
+- `_data_buffer`: Data buffer.
+- `_xfr_completed_outer`: Transfer completion counter.
+
+**Methods:**
+- `__init__`: Initializes the DMA object.
+- `init_desc_buff`: Initializes descriptor buffer.
+- `init_dma`: Initializes DMA.
+- `soft_reset_dma`: Performs a soft reset of the DMA.
+
+#### Streamer Class
+This class handles data streaming to a remote host.
+
+**Attributes:**
+- `_host`: Remote host address.
+- `_port`: Remote port.
+
+**Methods:**
+- `__init__`: Initializes the streamer.
+- `stream_init`: Initializes the streaming process.
+
+---
+
+### DAC (Digital-to-Analog Converter) Classes
+
+#### dac_populate_exp_config Class
+This class populates experimental configuration for the DAC.
+
+**Attributes:**
+- `_config`: Dictionary of configuration parameters.
+
+**Methods:**
+- `__init__`: Initializes the experimental configuration.
+- `cal_dac_param4`: Calculates DAC parameter 4.
+- `cal_n_s`: Calculates the number of samples.
+
+#### dac Class
+This class represents a DAC and provides methods to configure and control its behavior.
+
+**Attributes:**
+- `_rf`: Reference to the RF object.
+- `_ch`: Channel number.
+- `_exp_config`: Experimental configuration.
+- `_fs`: Sampling frequency.
+- `_nco_freq`: Local oscillator frequency.
+- `_nco_phase`: Phase offset.
+- `_readout_channel`: Readout channel configuration.
+- `_bram_size`: Size of the BRAM.
+- `_bram_mmio_conf_mem`: MMIO handle for configuration memory.
+- `_bram_mmio_I_lsb`: MMIO handle for I samples (LSB).
+- `_bram_mmio_I_msb`: MMIO handle for I samples (MSB).
+- `_bram_mmio_Q_lsb`: MMIO handle for Q samples (LSB).
+- `_bram_mmio_Q_msb`: MMIO handle for Q samples (MSB).
+- `_control_or_readout_sel_addr`: MMIO handle for readout channel selection.
+- `_dac_handle`: Handle to the DAC hardware block.
+
+**Methods:**
+- `__init__`: Initializes the DAC object.
+- `concat_samples`: Concatenates samples.
+- `prog_param`: Programs a parameter value.
+- `set_param`: Sets a parameter value.
+- `init_conf_mem`: Initializes configuration memory.
+- `set_readout_channel`: Sets the readout channel.
+- `load_wave`: Loads waveform samples.
+- `set_nco_freq`: Sets the NCO frequency.
+- `set_nco_phase`: Sets the NCO phase offset.
+- `set_nyquist`: Sets the Nyquist zone.
+- `reset_nco_phase`: Resets the NCO phase.

@@ -90,7 +90,6 @@ dac_exp_config = {"power_rabi": 0,
                   "loopback": 0,
                   "READOUT_CHANNEL_CONF_ADDR": dac_mem_config[0]['DAC_CONF_ADDR'] + 60
                   "wave_type" : "gaussian"
-
                   }
 adc_mem_config = {"IIR_CONF_MEM_SIZE": 8096,
                   "IIR_CONF_BASE_ADDR": 0x0080000000,
