@@ -10,6 +10,56 @@ from pynq import MMIO
 import matplotlib.pyplot as plt
 import threading
 
+"""
+A class to configure and manage a Digital-to-Analog Converter (DAC) in a quantum control electronics system.
+Attributes:
+    _rf: RF object for DAC configuration.
+    _ch: Channel number of the DAC.
+    u_obj: User object containing configuration and waveform data.
+    _exp_config: Experimental configuration for the DAC.
+    _fs: Sampling frequency of the DAC.
+    _nco_freq: Numerically Controlled Oscillator (NCO) frequency for the DAC.
+    _nco_phase: NCO phase for the DAC.
+    _nyquist_zone: Nyquist zone for the DAC.
+    _readout_channel: Readout channel associated with the DAC.
+    _bram_size: Size of the Block RAM (BRAM) for the DAC.
+    _conf_mem_base_addr: Base address of the configuration memory.
+    _bram_mmio_conf_mem: MMIO object for configuration memory.
+    _bram_mmio_I_lsb: MMIO object for I samples (LSB).
+    _bram_mmio_I_msb: MMIO object for I samples (MSB).
+    _bram_mmio_Q_lsb: MMIO object for Q samples (LSB).
+    _bram_mmio_Q_msb: MMIO object for Q samples (MSB).
+    _control_or_readout_sel_addr: Address for control or readout channel selection.
+    _dac_handle: Handle to the DAC hardware block.
+Methods:
+    __init__(rf, ch, config, mem_config, top_config, hw_config, u_obj):
+        Initializes the DAC object with the provided configuration and hardware settings.
+    concat_samples(samples_l, samples_m):
+        Concatenates two 16-bit samples into a 32-bit integer.
+    prog_param(addr, val):
+        Programs a parameter value into the configuration memory at the specified address.
+    set_param(key, val, unit):
+        Sets a parameter value for the DAC based on the key, value, and unit.
+    get_param(key):
+        Retrieves the value of a parameter based on the key.
+    init_conf_mem(mmio_handle):
+        Initializes the configuration memory with default parameter values.
+    set_readout_channel(val):
+        Sets the readout channel for the DAC.
+    get_readout_channel():
+        Retrieves the current readout channel for the DAC.
+    load_wave(u_obj):
+        Loads waveform data (I and Q samples) into the DAC's memory.
+    set_nco_freq(freq, event=xrfdc.EVNT_SRC_SYSREF):
+        Sets the NCO frequency for the DAC.
+    set_nco_phase(phase, event=xrfdc.EVNT_SRC_SYSREF):
+        Sets the NCO phase for the DAC.
+    set_nyquist_zone(nyq_zone, event=xrfdc.EVNT_SRC_SYSREF):
+        Sets the Nyquist zone for the DAC.
+    reset_nco_phase(event=xrfdc.EVNT_SRC_SYSREF):
+        Resets the NCO phase for the DAC.
+"""
+
 class dac_populate_exp_config():
     def __init__(self,u_obj, ch, exp_config, dac_conf, conf, hw_config ):
         #super().__init__(hw_config)
@@ -65,6 +115,7 @@ class dac_populate_exp_config():
 
 
 class dac():
+    class dac:
     def __init__(self, rf, ch, config, mem_config, top_config, hw_config, u_obj):  # ch, fs, mixer_freq, phase, bram_addr):
         #super().__init__(hw_config)
         self._rf = rf

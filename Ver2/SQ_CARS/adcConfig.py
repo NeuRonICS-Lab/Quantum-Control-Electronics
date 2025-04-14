@@ -17,6 +17,81 @@ import threading
 import time
 import sys
 
+
+"""
+The Readout class is responsible for configuring and managing the readout 
+process for a specific channel in a quantum control electronics system. 
+It handles ADC (Analog-to-Digital Converter) configurations, DMA (Direct 
+Memory Access) operations, and streaming data to a remote host.
+Attributes:
+    _rf: Reference to the RF (Radio Frequency) object.
+    _ch: Channel number for the readout.
+    _top_config: Top-level configuration object.
+    u_obj: Utility object for hardware interactions.
+    _fs: Sampling frequency from the readout configuration.
+    _start_reg: Register for starting FIFO capture.
+    _nco_freq: NCO (Numerically Controlled Oscillator) frequency.
+    _nco_phase: NCO phase offset.
+    _nyquist_zone: Nyquist zone for the ADC.
+    _adc_input_sel: ADC input selection.
+    _adc_fil_bypass: ADC filter bypass flag.
+    _readout_xfr_count: Number of readout transfers.
+    _adc_theta: ADC rotation angle.
+    _trigger_width: Trigger width in cycles.
+    _trigger_delay: Start trigger delay.
+    _adc_dac_lat: ADC-DAC latency.
+    _conf_mem_base_addr: Base address for configuration memory.
+    _conf_param_base_addr: Base address for parameter configuration.
+    _start_fifo_reg_addr: Physical address of the start FIFO register.
+    _adc_handle: Handle to the ADC block.
+    _adc_pipeline: Instance of the AdcPipeline class.
+    _dma: Instance of the Dma class for data transfer.
+    _streamer: Instance of the Streamer class for data streaming.
+    _streamer_process: Thread for managing the streaming process.
+Methods:
+    __init__(rf, ch, rdout_config, rdout_mem_config, top_config, o1, hw_config, u_obj):
+        Initializes the Readout object with the provided configurations.
+    init_all_params():
+        Initializes all parameters for the readout process.
+    set_nco_freq(freq, event=xrfdc.EVNT_SRC_SYSREF):
+        Sets the NCO frequency for the ADC.
+    set_nco_phase(phase, event=xrfdc.EVNT_SRC_SYSREF):
+        Sets the NCO phase offset for the ADC.
+    set_nyquist_zone(nyq_zone, event=xrfdc.EVNT_SRC_SYSREF):
+        Sets the Nyquist zone for the ADC.
+    reset_nco_phase(event=xrfdc.EVNT_SRC_SYSREF):
+        Resets the NCO phase for the ADC.
+    init_streamer(mode, power_rabi):
+        Initializes the data streamer with the specified mode and power.
+    start_readout():
+        Starts the readout process by launching the streamer thread.
+    stop_readout():
+        Stops the readout process and terminates the streamer thread.
+    set_adc_src_sel(val):
+        Sets the ADC input source selection.
+    get_adc_src():
+        Retrieves the current ADC input source selection.
+    set_filter_bypass(val):
+        Sets the ADC filter bypass flag.
+    get_filter_bypass():
+        Retrieves the current ADC filter bypass flag.
+    set_adc_quad(val):
+        Sets the ADC quadrature value.
+    set_adc_theta(val):
+        Sets the ADC rotation angle.
+    get_adc_theta():
+        Retrieves the current ADC rotation angle.
+    set_ila_sel(val):
+        Sets the ILA (Integrated Logic Analyzer) selection for debugging.
+    set_readout_update(val):
+        Sets the readout update flag.
+    get_readout_update(val):
+        Retrieves the current readout update flag.
+    set_ma_bypass(val):
+        Sets the moving average bypass flag.
+    dma_streamer_thread(exp_prog_val):
+        Thread function for managing DMA data streaming to the remote host.
+"""
 ADC_CONF_MEM_SIZE = 4096
 ADC_PIPELINE_PARAM_OFFSET = 48 #  IIR paramers (num_ch * param_no * 4 bytes = 4*3*4=48) go first in conf mem, other params start afterwards
 ADC_SRC_SEL_BIT_OFFSET = 0
@@ -29,6 +104,7 @@ ADC_UPDATE_OFFSET = 24
 MA_BYP_BASE_ADDR = 80
 #ADC_IIR_ORDER_OFFSET = 
 class Readout():
+    class Readout:
     def __init__(self, rf, ch, rdout_config, rdout_mem_config, top_config, o1, hw_config, u_obj):
         logging.debug('RT-4')
         #super().__init__(hw_config)

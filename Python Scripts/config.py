@@ -1,3 +1,49 @@
+"""
+Configuration file for Quantum Control Electronics.
+This script defines various configuration dictionaries for DAC, ADC, and RFDC components, 
+as well as experimental and hardware settings. These configurations are used to control 
+and manage the behavior of the quantum control system.
+Configurations:
+---------------
+1. dac_mem_config:
+    - Memory configuration for DAC channels.
+    - Contains details such as BRAM size, configuration address, and BRAM addresses for I/Q data.
+2. dac_exp_config:
+    - Experimental configuration for DAC.
+    - Includes parameters like mode, repetition rate, pulse duration, amplitude, and waveform type.
+3. adc_mem_config:
+    - Memory configuration for ADC.
+    - Defines the size and base address for IIR configuration memory.
+4. iir_filter_config:
+    - Configuration for IIR filters.
+    - Includes cutoff frequency and filter order.
+5. adc_pipeline_config:
+    - Configuration for ADC pipeline.
+    - Specifies input selection, filter bypass, and phase angle.
+6. adc_config_0, adc_config_1:
+    - ADC channel-specific configurations.
+    - Includes sampling frequency, LO frequency, phase, gain, and filter settings.
+7. dac_config_0 to dac_config_4:
+    - DAC channel-specific configurations.
+    - Includes sampling frequency, LO frequency, phase, gain, and experimental settings.
+8. adc_config:
+    - Aggregated configuration for all ADC channels.
+9. dac_config:
+    - Aggregated configuration for all DAC channels.
+10. rfdc_config:
+        - RFDC configuration combining DAC and ADC settings.
+        - Includes channel counts, memory configurations, and individual channel configurations.
+11. hw_config:
+        - Hardware configuration.
+        - Defines fabric clock frequency and samples per cycle.
+Logging:
+--------
+- Configures logging to output debug information to standard error.
+Note:
+-----
+- Some configurations reference undefined variables (e.g., `config["readout_dtype"]`, `config["dac_channels"]`).
+    Ensure these variables are defined elsewhere in the codebase.
+"""
 
 
 dac_mem_config = {0: {"DAC_BRAM_SIZE": 8096,

@@ -1,3 +1,36 @@
+"""
+A class containing utility functions for waveform generation, time conversion, 
+and hardware configuration management.
+Attributes:
+    _hw_config (dict): Hardware configuration dictionary containing parameters 
+        like "fabric_clock".
+Methods:
+    __init__(hw_config):
+        Initializes the utility_functions class with the provided hardware configuration.
+    ns_to_cycles(time):
+        Converts time in nanoseconds to clock cycles based on the hardware configuration.
+    us_to_cycles(time):
+        Converts time in microseconds to clock cycles based on the hardware configuration.
+    ms_to_cycles(time):
+        Converts time in milliseconds to clock cycles based on the hardware configuration.
+    gaussian(x, mu, sig):
+        Computes the Gaussian function for the given input.
+    der_gaussian(x, mu, sig):
+        Computes the derivative of the Gaussian function for the given input.
+    sine(x):
+        Computes the sine of the given input.
+    to_hex_scale(x, amp_scale):
+        Scales the input waveform to a hexadecimal range based on the amplitude scale.
+    gen_wave(config, wav_type, on_time, sigma, amp_scale):
+        Generates a waveform of the specified type (e.g., Gaussian, derivative of Gaussian, sine, etc.)
+        with the given parameters.
+    set_bitfield(field_base_addr, field_offset, field_width, ch_num, new_val):
+        Sets a specific bitfield in the hardware configuration.
+    get_bitfield(field_base_addr, field_offset, field_width, ch_num):
+        Retrieves the value of a specific bitfield from the hardware configuration.
+    find_quad(theta_deg_0):
+        Determines the quadrant and adjusted angle for a given angle in degrees.
+"""
 class utility_functions():
     def __init__(self, hw_config):
         # self._config = config

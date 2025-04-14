@@ -26,6 +26,76 @@ from dacConfig import *
 from adcConfig import *
 from utility_classes import *
 import config
+
+"""
+rfdcConfig Class
+This class is responsible for configuring and managing the RF Data Converter (RFDC) on a ZCU111 board. 
+It provides methods to initialize, configure, and control the DAC and ADC channels, as well as manage 
+various experimental parameters and modes.
+Attributes:
+    u_obj (object): User-defined object containing configuration and experimental parameters.
+    top_config (object): Top-level configuration object.
+    o1 (object): Overlay object for FPGA bitstream.
+    rf (object): RF Data Converter object.
+    board (str): Board identifier (default: 'zcu111').
+    dac_channels (list): List of DAC channel indices.
+    adc_channels (list): List of ADC channel indices.
+    dac_tiles (list): List of DAC tile indices.
+    adc_tiles (list): List of ADC tile indices.
+    dac_id (list): List of DAC channel IDs.
+    adc_id (list): List of ADC channel IDs.
+    dac (list): List of DAC channel objects.
+    readout (list): List of ADC readout objects.
+    _stop_task (bool): Flag to indicate whether the task should stop.
+    _stop_lock (threading.Lock): Lock for managing the stop task flag.
+    gauss_the_boss (dict): Gaussian block control IP dictionary.
+    gauss_the_boss_reset (object): Reset channel for Gaussian block control.
+    gauss_the_boss_curr_state (object): Current state channel for Gaussian block control.
+Methods:
+    __init__(u_obj, rfdc_config, hw_config):
+        Initializes the RFDC configuration and sets up DAC and ADC channels.
+    init_MTS():
+        Initializes Multi-Tile Synchronization (MTS) for DAC and ADC tiles.
+    run_MTS():
+        Runs Multi-Tile Synchronization (MTS) for DAC and ADC tiles.
+    update_all():
+        Updates all experimental parameters including frequency, phase, mode, amplitude, and more.
+    set_readout_rotation(ch):
+        Sets the readout rotation angle for a specified ADC channel.
+    update_freq():
+        Updates the frequency for DAC and ADC channels and runs MTS.
+    update_phase():
+        Updates the phase for DAC channels and runs MTS.
+    update_mode():
+        Updates the mode for DAC channels.
+    update_amplitude():
+        Updates the amplitude for DAC channels.
+    update_readout_amplitude():
+        Updates the readout amplitude for DAC channels.
+    update_readout_channel():
+        Updates the readout channel for DAC channels.
+    update_loopback():
+        Updates the loopback configuration for DAC channels.
+    update_inner_loop_count():
+        Updates the inner loop count for ADC channels.
+    find_common_freq():
+        Finds a common frequency for DAC and ADC channels and updates the configuration.
+    disable_gaussian():
+        Disables the Gaussian waveform for all DAC channels.
+    enable_gaussian():
+        Enables the Gaussian waveform for all DAC channels.
+    change_time_bw_pulses(t_b_p, d):
+        Changes the time between pulses for a specified DAC channel.
+    update_param_exp(val):
+        Updates experimental parameters based on the experiment type.
+    stop_task_execution():
+        Stops the execution of the current task.
+    run_exp():
+        Runs the experiment based on the configured parameters.
+    create_slider_widget():
+        Creates an interactive slider widget for controlling experimental parameters.
+"""
+
 class mainConfig():
     def __init__(self, config):
         self.bitfile = config["bitfile"]

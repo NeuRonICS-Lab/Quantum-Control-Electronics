@@ -1,3 +1,52 @@
+"""
+This module contains the top-level configuration for controlling the number of DAC and ADC channels, 
+experiment parameters, DMA buffer parameters, and UDP streaming parameters. It provides configurations 
+for various components such as DAC, ADC, and RFDC, as well as experiment-specific settings.
+Modules:
+--------
+- `config`: Defines various experiment parameters.
+- `dac_exp_config`: Contains experiment-specific configurations for DAC, such as waveform shape, width, etc.
+- `dac_config`: Configures DAC parameters like LO (NCO frequency), Nyquist zone of operation, phase, etc.
+- `dac_mem_config`: Contains memory configurations for DAC. Users generally do not need to modify this.
+- `adc_config`: Configures ADC readout pipeline parameters.
+- `adc_mem_config`: Contains memory configurations for ADC.
+- `iir_filter_config`: Configures IIR filter parameters such as cutoff frequency and filter order.
+- `adc_pipeline_config`: Configures ADC pipeline settings like input selection, filter bypass, and rotation angle.
+- `rfdc_config`: Aggregates DAC and ADC configurations for RFDC setup.
+- `hw_config`: Contains hardware-level configurations like fabric clock and samples per cycle.
+Configurations:
+---------------
+1. `config`: 
+- General experiment parameters such as frequency range, amplitude range, remote host/port, and trigger settings.
+2. `dac_mem_config`: 
+- Memory addresses and sizes for DAC BRAMs and configuration registers.
+3. `dac_exp_config`: 
+- Experiment-specific settings for DAC, including pulse shapes, repetition rates, and amplitude factors.
+4. `adc_mem_config`: 
+- Memory configuration for ADC IIR filters.
+5. `iir_filter_config`: 
+- IIR filter parameters like cutoff frequency and filter order.
+6. `adc_pipeline_config`: 
+- ADC pipeline settings such as input selection, filter bypass, and rotation angle.
+7. `adc_config`: 
+- Per-channel ADC configurations, including sampling frequency, LO frequency, phase, and filter settings.
+8. `dac_config`: 
+- Per-channel DAC configurations, including sampling frequency, LO frequency, phase, and gain.
+9. `rfdc_config`: 
+- Aggregated configuration for RFDC, including DAC and ADC channels, memory configurations, and ZCU111 tile settings.
+10. `hw_config`: 
+    - Hardware-level settings like fabric clock frequency and samples per cycle.
+Logging:
+--------
+- Logs are written to `output.log` with INFO level.
+Constants:
+----------
+- `num_desc_glbl`: Global descriptor count for ADC channels.
+Dependencies:
+-------------
+- `numpy`: Used for specifying data types.
+- `logging`: Used for logging configuration and runtime information.
+"""
 #This file contains top level configuration which control the number of DAC channels and ADC channels used, experiment parameters, DMA buffer parametrs, UDP streaming parameters
 #config: top level config, defines verious experiment parameters
 

@@ -1,4 +1,47 @@
-
+"""
+Class dac
+This class represents a Digital-to-Analog Converter (DAC) and provides methods to configure and control its behavior. 
+It inherits from the `utility_functions` class and interacts with hardware components through memory-mapped I/O (MMIO).
+Attributes:
+_rf (object): Reference to the RF object.
+_ch (int): Channel number for the DAC.
+_exp_config (object): Experimental configuration for the DAC.
+_fs (float): Sampling frequency.
+_nco_freq (float): Local oscillator frequency.
+_nco_phase (float): Phase offset for the NCO.
+_readout_channel (int): Readout channel configuration.
+_bram_size (int): Size of the BRAM.
+_bram_mmio_conf_mem (MMIO): MMIO handle for configuration memory.
+_bram_mmio_I_lsb (MMIO): MMIO handle for I samples (LSB).
+_bram_mmio_I_msb (MMIO): MMIO handle for I samples (MSB).
+_bram_mmio_Q_lsb (MMIO): MMIO handle for Q samples (LSB).
+_bram_mmio_Q_msb (MMIO): MMIO handle for Q samples (MSB).
+_control_or_readout_sel_addr (MMIO): MMIO handle for readout channel selection.
+_dac_handle (object): Handle to the DAC hardware block.
+Methods:
+__init__(rf, ch, config, mem_config, top_config, hw_config):
+    Initializes the DAC object with the given configurations and hardware settings.
+concat_samples(samples_l, samples_m):
+    Concatenates two 16-bit samples into a 32-bit integer.
+prog_param(addr, val):
+    Programs a parameter value into the configuration memory at the specified address.
+set_param(key, val, unit):
+    Sets a parameter value in the experimental configuration and programs it into the hardware.
+init_conf_mem(mmio_handle):
+    Initializes the configuration memory with default values from the experimental configuration.
+set_readout_channel(val):
+    Sets the readout channel for the DAC.
+load_wave(I_samples, Q_samples):
+    Loads I and Q waveform samples into the DAC's BRAM.
+set_nco_freq(freq, event):
+    Sets the NCO frequency for the DAC.
+set_nco_phase(phase, event):
+    Sets the NCO phase offset for the DAC.
+set_nyquist(nyq_zone, event):
+    Sets the Nyquist zone for the DAC.
+reset_nco_phase(event):
+    Resets the NCO phase for the DAC.
+"""
 class dac_populate_exp_config(utility_functions):
     def __init__(self, exp_config, conf, hw_config):
         super().__init__(hw_config)

@@ -19,6 +19,60 @@ from pynq import MMIO
 import matplotlib.pyplot as plt
 import threading 
 import config
+
+"""
+utility_functions class provides a collection of utility methods and properties 
+to support quantum control experiments. It includes methods for waveform generation, 
+experiment parameter calculations, and hardware interaction.
+Attributes:
+    _hw_config (dict): Hardware configuration dictionary.
+    _loopback (int): Loopback mode (0 or 1).
+    _start_gaussian (int): Initial Gaussian value.
+    _wakeup (int): Wakeup flag.
+    _no_of_pulses (int): Number of pulses in the experiment.
+    thisConfig: Configuration object for the experiment.
+Properties:
+    loopback (int): Getter and setter for loopback mode.
+    exp_type: Getter for the experiment type.
+Methods:
+    __init__(hw_config, thisConfig):
+        Initializes the utility_functions object with hardware and experiment configurations.
+    init_exp_user_params():
+        Initializes experiment parameters based on the configuration.
+    cal_wave_addr():
+        Calculates wave addresses for waveform generation.
+    cal_exp_params():
+        Calculates experiment parameters based on the experiment type.
+    gen_wave_sample():
+        Generates waveform samples based on the configuration.
+    ns_to_cycles(time):
+        Converts time in nanoseconds to clock cycles.
+    us_to_cycles(time):
+        Converts time in microseconds to clock cycles.
+    ms_to_cycles(time):
+        Converts time in milliseconds to clock cycles.
+    gaussian(x, mu, sig):
+        Generates a Gaussian waveform.
+    der_gaussian(x, mu, sig):
+        Generates the derivative of a Gaussian waveform.
+    sine(x):
+        Generates a sine waveform.
+    to_hex_scale(x, amp_scale):
+        Scales waveform values to hexadecimal format.
+    gen_wave(wav_type, on_time, sigma, amp_scale, time_bw_pulses, const_val=0x7fff):
+        Generates various types of waveforms based on the specified parameters.
+    set_bitfield(field_base_addr, field_offset, field_width, ch_num, new_val):
+        Sets a specific bitfield in the hardware register.
+    get_bitfield(field_base_addr, field_offset, field_width, ch_num):
+        Retrieves a specific bitfield value from the hardware register.
+    find_quad_angle(theta_deg_0):
+        Determines the quadrant and angle for a given degree value.
+    make_connect_tcp(host, port):
+        Establishes a TCP connection with a client.
+    run_server_sync():
+        Runs a synchronous server to handle client communication.
+"""
+
 class utility_functions():
     def __init__(self, hw_config, thisConfig):
         #self._config = config

@@ -1,4 +1,33 @@
+"""
+rfdcConfig is a class that configures and manages the RF Data Converter (RFDC) 
+in a programmable logic design. It initializes the RFDC, sets up DAC and ADC 
+channels, and provides methods for Multi-Tile Synchronization (MTS).
 
+Attributes:
+top_config (object): Configuration object containing the top-level bitfile.
+o1 (Overlay): Overlay object loaded with the bitfile from top_config.
+rf (object): RF Data Converter instance from the overlay.
+dac_channels (list): List of DAC channel IDs to be configured.
+adc_channels (list): List of ADC channel IDs to be configured.
+dac_id (list): List of initialized DAC channel IDs.
+adc_id (list): List of initialized ADC channel IDs.
+dac (list): List of DAC objects for each configured DAC channel.
+readout (list): List of Readout objects for each configured ADC channel.
+
+Methods:
+__init__(top_config, rfdc_config, hw_config):
+    Initializes the rfdcConfig object, sets up DAC and ADC channels, and 
+    performs initial Multi-Tile Synchronization (MTS).
+
+init_MTS():
+    Initializes Multi-Tile Synchronization (MTS) for the DAC tiles by 
+    calculating and setting the target latency.
+
+run_MTS():
+    Executes the Multi-Tile Synchronization (MTS) process by enabling and 
+    disabling the SYSREF signal and optionally setting NCO frequencies for 
+    the DAC channels.
+"""
 class mainConfig():
     def __init__(self, config):
         self.bitfile = config["bitfile"]

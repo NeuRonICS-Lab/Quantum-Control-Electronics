@@ -9,8 +9,56 @@ ADC_QUAD_BIT_OFFSET = 16
 ADC_THETA_OFFSET = 4  # (after 4 32-bit words from IIR params
 ADC_ILA_SEL_OFFSET = 20  # (after 20 32-bit words from IIR params
 
-
+"""
+A class to manage the readout process for ADC channels, including configuration, 
+data streaming, and DMA handling.
+Attributes:
+    _rf: Reference to the RF object for ADC tile and block access.
+    _ch: Channel number for the readout.
+    _start_reg: Register to start FIFO capture.
+    _readout_trigger_src: Source of the readout trigger.
+    _adc_input_sel: ADC input selection.
+    _adc_fil_bypass: Filter bypass configuration for the ADC.
+    _adc_theta: Theta value for ADC configuration.
+    _trigger_width: Width of the trigger signal.
+    _trigger_delay: Delay of the trigger signal.
+    _adc_dac_lat: ADC to DAC latency.
+    _conf_mem_base_addr: Base address for configuration memory.
+    _conf_param_base_addr: Base address for configuration parameters.
+    _adc_handle: Handle to the ADC block.
+    _adc_pipeline: Instance of the AdcPipeline class for ADC pipeline configuration.
+    _dma: Instance of the Dma class for DMA handling.
+    _streamer: Instance of the Streamer class for data streaming.
+Methods:
+    __init__(rf, ch, rdout_config, rdout_mem_config, top_config, o1, hw_config):
+        Initializes the Readout object with the given configurations.
+    init_all_params():
+        Initializes all ADC parameters including source selection, filter bypass, and theta.
+    start_readout():
+        Starts the readout process by enabling the start register and launching the DMA streamer thread.
+    stop_readout():
+        Stops the readout process by disabling the start register and stopping the DMA streamer thread.
+    set_adc_src_sel(val):
+        Sets the ADC source selection.
+    get_adc_src():
+        Gets the current ADC source selection.
+    set_filter_bypass(val):
+        Sets the filter bypass configuration.
+    get_filter_bypass():
+        Gets the current filter bypass configuration.
+    set_adc_quad(val):
+        Sets the ADC quadrature value.
+    set_adc_theta(val):
+        Sets the ADC theta value and updates the quadrature configuration.
+    get_adc_theta():
+        Gets the current ADC theta value.
+    set_ila_sel(val):
+        Sets the ILA selection for debugging purposes.
+    dma_streamer_thread():
+        Handles the DMA streaming process, including data transfer and streaming to a remote host.
+"""
 class Readout(utility_functions):
+    class Readout:
     def __init__(self, rf, ch, rdout_config, rdout_mem_config, top_config, o1, hw_config):
         logging.debug('RT-4')
         super().__init__(hw_config)

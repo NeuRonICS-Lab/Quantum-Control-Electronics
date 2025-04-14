@@ -1,0 +1,28 @@
+digraph QuantumControlElectronics {
+    rankdir=LR;
+
+    subgraph cluster_ADC {
+        label = "ADC (Analog-to-Digital Converter)";
+        Readout [label="Readout Class"];
+        AdcPipeline [label="AdcPipeline Class"];
+        IIRFilter [label="IIRFilter Class"];
+        Readout -> AdcPipeline;
+        AdcPipeline -> IIRFilter;
+    }
+
+    subgraph cluster_DAC {
+        label = "DAC (Digital-to-Analog Converter)";
+        DAC [label="DAC Class"];
+        DACConfig [label="DAC Configuration"];
+    }
+
+    DMA [label="DMA (Direct Memory Access)"];
+    Streamer [label="Streamer"];
+    ConfigModules [label="Configuration Modules"];
+
+    cluster_ADC -> DMA;
+    DMA -> Streamer;
+    ConfigModules -> cluster_ADC;
+    ConfigModules -> cluster_DAC;
+    cluster_DAC -> DMA;
+}

@@ -1,0 +1,194 @@
+# Project Documentation
+
+## Overview
+This project is a Quantum Control Electronics system designed to manage and control quantum hardware components. It includes Python scripts, configuration files, and hardware overlays for ADC and DAC operations.
+
+## Folder Structure
+
+### Python Scripts
+Contains Python modules for ADC and DAC operations, utility functions, and main configuration scripts.
+
+- **config.py**: Configuration settings for the project.
+- **dac_Classes.py**: Classes for managing DAC operations, including waveform generation and configuration.
+- **main.py**: Main entry point for the project.
+- **mainConfig.py**: Configuration script for the main application.
+- **readout_adc_classes.py**: Classes for managing ADC readout, including DMA and data streaming.
+- **Utility_functions.py**: Utility functions used across the project.
+
+### Ver1
+Contains the first version of the project, including Jupyter notebooks and configuration scripts.
+
+- **freq_sweep_checkout.ipynb**: Jupyter notebook for frequency sweep experiments.
+- **SQ_CARS/**: Subfolder containing configuration and utility scripts for the first version.
+  - **adcConfig.py**: ADC configuration settings.
+  - **config.py**: General configuration settings.
+  - **dacConfig.py**: DAC configuration settings.
+  - **rfdcConfig.py**: RFDC configuration settings.
+  - **utility_classes.py**: Utility classes for the first version.
+
+### Ver2
+Contains the second version of the project, including updated Jupyter notebooks and output files.
+
+- **integrated_test.ipynb**: Jupyter notebook for integrated system testing.
+- **output.log**: Log file for system outputs.
+- **wave.txt**: Text file containing waveform data.
+- **bitstreams/**: Subfolder containing hardware bitstream files.
+  - **design_1_wrapper_jun18.bit**: Bitstream file for hardware configuration.
+  - **design_1_wrapper_jun18.hwh**: Hardware wrapper file.
+  - **design_1_wrapper_jun18.ltx**: Debug file for hardware.
+- **SQ_CARS/**: Subfolder containing configuration and utility scripts for the second version.
+  - **adcConfig.py**: ADC configuration settings.
+  - **config.py**: General configuration settings.
+  - **dacConfig.py**: DAC configuration settings.
+  - **output.log**: Log file for the second version.
+  - **rfdcConfig.py**: RFDC configuration settings.
+  - **utility_classes.py**: Utility classes for the second version.
+
+### Vivado Overlay Outputs
+Contains hardware overlay files for the project.
+
+- **design_1_wrapper.bit**: Bitstream file for hardware configuration.
+- **design_1_wrapper.hwh**: Hardware wrapper file.
+- **design_1.hwh**: Additional hardware wrapper file.
+
+### doc
+Contains project documentation.
+
+- **documentation.txt**: This file, containing an overview and detailed documentation of the project.
+
+### Root Files
+- **four_qubit_rebuild.tcl**: TCL script for rebuilding the four-qubit system.
+- **README.md**: Readme file with a brief overview of the project.
+
+## Python Scripts
+
+### readout_adc_classes.py
+This module manages the readout process for ADC channels, including configuration, data streaming, and DMA handling.
+
+#### Classes:
+- **Readout**: Handles ADC readout configuration and data streaming.
+  - **Attributes**:
+    - `_rf`: Reference to the RF object for ADC tile and block access.
+    - `_ch`: Channel number for the readout.
+    - `_start_reg`: Register to start FIFO capture.
+    - `_readout_trigger_src`: Source of the readout trigger.
+    - `_adc_input_sel`: ADC input selection.
+    - `_adc_fil_bypass`: Filter bypass configuration for the ADC.
+    - `_adc_theta`: Theta value for ADC configuration.
+    - `_trigger_width`: Width of the trigger signal.
+    - `_trigger_delay`: Delay of the trigger signal.
+    - `_adc_dac_lat`: ADC to DAC latency.
+    - `_conf_mem_base_addr`: Base address for configuration memory.
+    - `_conf_param_base_addr`: Base address for configuration parameters.
+    - `_adc_handle`: Handle to the ADC block.
+    - `_adc_pipeline`: Instance of the AdcPipeline class for ADC pipeline configuration.
+    - `_dma`: Instance of the Dma class for DMA handling.
+    - `_streamer`: Instance of the Streamer class for data streaming.
+  - **Methods**:
+    - `__init__`: Initializes the Readout object with configurations.
+    - `init_all_params`: Initializes ADC parameters.
+    - `start_readout`: Starts the readout process.
+    - `stop_readout`: Stops the readout process.
+    - `set_adc_src_sel`: Sets ADC source selection.
+    - `get_adc_src`: Gets ADC source selection.
+    - `set_filter_bypass`: Sets filter bypass configuration.
+    - `get_filter_bypass`: Gets filter bypass configuration.
+    - `set_adc_quad`: Sets ADC quadrature value.
+    - `set_adc_theta`: Sets ADC theta value.
+    - `get_adc_theta`: Gets ADC theta value.
+    - `set_ila_sel`: Sets ILA selection for debugging.
+    - `dma_streamer_thread`: Handles DMA streaming.
+
+- **AdcPipeline**: Configures the ADC pipeline.
+  - **Attributes**:
+    - `_filter`: Instance of IIRFilter for ADC filtering.
+  - **Methods**:
+    - `__init__`: Initializes the ADC pipeline.
+
+- **IIRFilter**: Configures IIR filter parameters.
+  - **Attributes**:
+    - `_ch`: Channel number.
+    - `_f_cutoff`: Cutoff frequency.
+    - `_f_order`: Filter order.
+    - `_fs`: Sampling frequency.
+    - `_conf_mem_base_addr`: Base address for configuration memory.
+    - `_conf_mem_size`: Size of configuration memory.
+    - `_conf_param_base_addr`: Base address for configuration parameters.
+    - `_conf_mem_mmio_handle`: MMIO handle for configuration memory.
+    - `_Ts`: Sampling period.
+  - **Methods**:
+    - `__init__`: Initializes the IIR filter.
+    - `scale`: Scales a value to a specific bit width.
+    - `concat_samples`: Concatenates samples.
+    - `gen_iir_params`: Generates IIR filter parameters.
+    - `set_iir_params`: Sets IIR filter parameters.
+    - `get_iir_params`: Gets IIR filter parameters.
+    - `set_iir_order`: Sets IIR filter order.
+    - `get_iir_order`: Gets IIR filter order.
+
+- **Dma**: Manages DMA operations.
+  - **Attributes**:
+    - `_dma_handle`: Handle to the DMA hardware block.
+    - `_dma_reg_addr`: MMIO handle for DMA registers.
+    - `_data_len`: Data length.
+    - `_num_desc`: Number of descriptors.
+    - `_desc_data_size`: Descriptor data size.
+    - `_data_type`: Data type.
+    - `_desc_buffer`: Descriptor buffer.
+    - `_data_buffer`: Data buffer.
+    - `_xfr_completed_outer`: Transfer completion counter.
+  - **Methods**:
+    - `__init__`: Initializes the DMA object.
+    - `init_desc_buff`: Initializes descriptor buffer.
+    - `init_dma`: Initializes DMA.
+    - `soft_reset_dma`: Performs a soft reset of the DMA.
+
+- **Streamer**: Handles data streaming to a remote host.
+  - **Attributes**:
+    - `_host`: Remote host address.
+    - `_port`: Remote port.
+  - **Methods**:
+    - `__init__`: Initializes the streamer.
+    - `stream_init`: Initializes the streaming process.
+
+### dac_Classes.py
+This module represents a Digital-to-Analog Converter (DAC) and provides methods to configure and control its behavior.
+
+#### Classes:
+- **dac_populate_exp_config**: Populates experimental configuration for the DAC.
+  - **Attributes**:
+    - `_config`: Dictionary of configuration parameters.
+  - **Methods**:
+    - `__init__`: Initializes the experimental configuration.
+    - `cal_dac_param4`: Calculates DAC parameter 4.
+    - `cal_n_s`: Calculates the number of samples.
+
+- **dac**: Represents a DAC and provides methods to configure and control its behavior.
+  - **Attributes**:
+    - `_rf`: Reference to the RF object.
+    - `_ch`: Channel number.
+    - `_exp_config`: Experimental configuration.
+    - `_fs`: Sampling frequency.
+    - `_nco_freq`: Local oscillator frequency.
+    - `_nco_phase`: Phase offset.
+    - `_readout_channel`: Readout channel configuration.
+    - `_bram_size`: Size of the BRAM.
+    - `_bram_mmio_conf_mem`: MMIO handle for configuration memory.
+    - `_bram_mmio_I_lsb`: MMIO handle for I samples (LSB).
+    - `_bram_mmio_I_msb`: MMIO handle for I samples (MSB).
+    - `_bram_mmio_Q_lsb`: MMIO handle for Q samples (LSB).
+    - `_bram_mmio_Q_msb`: MMIO handle for Q samples (MSB).
+    - `_control_or_readout_sel_addr`: MMIO handle for readout channel selection.
+    - `_dac_handle`: Handle to the DAC hardware block.
+  - **Methods**:
+    - `__init__`: Initializes the DAC object.
+    - `concat_samples`: Concatenates samples.
+    - `prog_param`: Programs a parameter value.
+    - `set_param`: Sets a parameter value.
+    - `init_conf_mem`: Initializes configuration memory.
+    - `set_readout_channel`: Sets the readout channel.
+    - `load_wave`: Loads waveform samples.
+    - `set_nco_freq`: Sets the NCO frequency.
+    - `set_nco_phase`: Sets the NCO phase offset.
+    - `set_nyquist`: Sets the Nyquist zone.
+    - `reset_nco_phase`: Resets the NCO phase.

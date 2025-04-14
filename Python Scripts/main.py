@@ -1,3 +1,33 @@
+"""
+This script is used for configuring and controlling a quantum control electronics system. 
+It initializes configuration parameters, sets up RFDC (Radio Frequency Data Converter) 
+handles, and loads waveforms into DAC (Digital-to-Analog Converter) channels.
+Configuration:
+- `config`: A dictionary containing various configuration parameters such as bitfile path, 
+DAC/ADC channels, frequency and amplitude ranges, remote host details, and trigger settings.
+Main Functions:
+1. `mainConfig(config)`: Processes the configuration dictionary and returns a configuration object.
+2. `rfdcConfig(thisConfig, rfdc_config, hw_config)`: Sets up the RFDC handle using the provided 
+    configuration and hardware settings.
+3. `utility_functions(hw_config)`: Provides utility functions for waveform generation and other tasks.
+Key Operations:
+- Iterates over the DAC channels specified in the configuration.
+- Generates waveforms (`w1_I` and `w1_Q`) using the `gen_wave` method of the utility object.
+- Loads the generated waveforms into the corresponding DAC channels.
+- Configures DAC parameters such as reset and update using the `set_param` method.
+Parameters:
+- `config`: Dictionary containing configuration details.
+- `rfdc_config`: RFDC-specific configuration (not defined in the provided code).
+- `hw_config`: Hardware-specific configuration (not defined in the provided code).
+- `dac_exp_config`: Configuration for DAC experiments, including waveform type, pulse duration, 
+and Gaussian sigma (not defined in the provided code).
+Note:
+- The script assumes the existence of `mainConfig`, `rfdcConfig`, and `utility_functions` functions 
+or classes, as well as `rfdc_config`, `hw_config`, and `dac_exp_config` objects, which are not 
+defined in the provided code snippet.
+- The `readout_dtype` parameter in the configuration is set to `np.uint64`, so the `numpy` library 
+must be imported for the script to work.
+"""
 config = {"bitfile": "./design_1_wrapper_2Jan.bit",
           "dac_channels": [0, 1, 2], "adc_channels": [0],
           "exp_list": [1],
