@@ -28,7 +28,10 @@ run_MTS():
     disabling the SYSREF signal and optionally setting NCO frequencies for 
     the DAC channels.
 """
-class mainConfig():
+import numpy as np
+import logging
+
+class configuration():
     def __init__(self, config):
         self.bitfile = config["bitfile"]
 

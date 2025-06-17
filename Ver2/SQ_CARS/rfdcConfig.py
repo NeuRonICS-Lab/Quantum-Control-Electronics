@@ -1,8 +1,8 @@
 #Class defination for the main configuration and the board (RF Data converter)
 
 import numpy 
-import xrfdc
-import xrfclk
+#import xrfdc
+#import xrfclk
 #from pynq import Xlnk
 
 from pynq import Overlay
@@ -18,13 +18,12 @@ import logging, sys
 from pynq import MMIO
 import matplotlib.pyplot as plt
 import threading 
-import ipywidgets as widgets
-from IPython.display import display, clear_output
+
 from tqdm import tqdm
 
-from dacConfig import *
-from adcConfig import *
-from utility_classes import *
+from .dacConfig import *
+from .adcConfig import *
+from .utility_classes import *
 import config
 
 """

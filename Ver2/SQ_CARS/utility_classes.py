@@ -1,8 +1,8 @@
 #Class defination for various utility functions
 
 import numpy 
-import xrfdc
-import xrfclk
+#import xrfdc
+#import xrfclk
 #from pynq import Xlnk
 from pynq import Overlay
 from pynq.lib import AxiGPIO
@@ -18,7 +18,7 @@ import logging, sys
 from pynq import MMIO
 import matplotlib.pyplot as plt
 import threading 
-import config
+from .settings import config
 
 """
 utility_functions class provides a collection of utility methods and properties 
@@ -75,7 +75,7 @@ Methods:
 
 class utility_functions():
     def __init__(self, hw_config, thisConfig):
-        #self._config = config
+        self._config = config
         self._hw_config = hw_config
         self._loopback = 0;
         self._start_gaussian = 0;

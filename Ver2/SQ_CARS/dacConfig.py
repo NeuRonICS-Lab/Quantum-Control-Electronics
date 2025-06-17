@@ -1,8 +1,8 @@
 #Class defination for DACs 
 
-from utility_classes import *
-import xrfdc
-import xrfclk
+from .utility_classes import *
+#import xrfdc
+#import xrfclk
 import numpy
 from pynq import MMIO
 import logging, sys
@@ -115,7 +115,6 @@ class dac_populate_exp_config():
 
 
 class dac():
-    class dac:
     def __init__(self, rf, ch, config, mem_config, top_config, hw_config, u_obj):  # ch, fs, mixer_freq, phase, bram_addr):
         #super().__init__(hw_config)
         self._rf = rf

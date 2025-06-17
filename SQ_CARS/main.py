@@ -28,6 +28,7 @@ defined in the provided code snippet.
 - The `readout_dtype` parameter in the configuration is set to `np.uint64`, so the `numpy` library 
 must be imported for the script to work.
 """
+import mainConfig
 config = {"bitfile": "./design_1_wrapper_2Jan.bit",
           "dac_channels": [0, 1, 2], "adc_channels": [0],
           "exp_list": [1],

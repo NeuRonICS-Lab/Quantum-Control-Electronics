@@ -45,7 +45,34 @@ Note:
     Ensure these variables are defined elsewhere in the codebase.
 """
 
+import numpy as np
+import logging, sys
+num_desc_glbl = 6
 
+logging.basicConfig(filename='output.log', filemode='w', level=logging.INFO)
+config = {"bitfile": "./bitstreams/design_1_wrapper_jun18.bit" ,
+          "dac_channels": [0, 1, 2, 3, 4,5,6,7], "adc_channels": [0],
+          "exp_list": [1],
+          "freq_scale": "G",
+          "freq_start": 4400,
+          "freq_steps": 100,
+          "freq_end": 4600,
+          "amp_start": 6.123456,
+          "amp_steps": 100,
+          "amp_end": 6.323456,
+          "remote_host": "192.168.1.1",
+          "remote_port": {0: 503, 1: 504, 2: 505, 3: 506,}, # 4:507, 5:508, 6:509, 7:510},
+          "tcp_server" : '192.168.1.99',
+          "tcp_port" : 8000,
+          #"adc_config": adc_config,
+          #"dac_config": dac_config,
+          "loopback": 0,
+          "adc_dac_lat": 35, #cycles
+          "trigger_delay": 0, #ns
+          "trigger_width" : 4000, #4686 , #2343, #nano seconds
+          "trigger_time": 0,
+          "readout_dtype" : np.int64
+          }
 dac_mem_config = {0: {"DAC_BRAM_SIZE": 8096,
                       "DAC_CONF_ADDR": 0x00B00D0000,
                       "DAC_BRAM_I_LSB": 0x00B0000000,
